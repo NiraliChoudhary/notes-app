@@ -19,7 +19,13 @@ function signUp(){
     const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
     promise.catch(e => alert(e.message));
 
-    alert("Signed Up");
+
+    promise.then(user =>{
+        console.log("Signed In as"+email.value);
+        
+    })
+
+    
 }
     
 
@@ -33,7 +39,7 @@ function signIn(){
 
     //takes user to a different home page 
 }
-function signout() {
+function signOut() {
     auth.signOut();
     alert("Signed Out");
     
