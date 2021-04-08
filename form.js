@@ -21,7 +21,8 @@ function signUp(){
 
 
     promise.then(user =>{
-        console.log("Signed In as"+email.value);
+        console.log("Signed Up as"+email.value);
+        window.location.href="homepage.html"
         
     })
 
@@ -36,6 +37,13 @@ function signIn(){
 
     const promise = auth.signInWithEmailAndPassword(email.value, password.value);
     promise.catch(e => alert(e.message));
+    
+    
+    promise.then(user =>{
+        console.log("Signed In as"+email.value);
+        window.location.href="homepage.html"
+        
+    })
 
     //takes user to a different home page 
 }
